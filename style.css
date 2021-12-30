@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkslateblue;
+}
+
+.wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.image {
+  font-size: 10rem;
+}
+
+#dynamic {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+#dynamic::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  right: -10px;
+  display: block;
+}
+
+#dynamic.active::after {
+  display: none;
+}
